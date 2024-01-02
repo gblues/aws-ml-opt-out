@@ -27,9 +27,9 @@ requested policy types. By default, the interpreter found with `env python3` wil
 Python is in another path, you can specify it via the `python_interpreter` variable.
 
 ### creating an organization
+- set `create_organization` to true
 - The `additional_enable_policy_types` and `aws_service_access_principals` are passed on to the
   `aws_organizations_organization` resource described [here](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/organizations_organization)
-  
   Note that `AISERVICES_OPT_OUT_POLICY` is always present and does not need to be set explicitly.
 
 Example:
@@ -41,7 +41,6 @@ module "screw_you_skynet" {
 ```
 
 ### modifying an existing organization
-- set `create_organization` to false
 - if you populate `additional_enabled_policy_types` then that will be honored
 - `aws_service_access_principcals` is ignored
 
