@@ -12,7 +12,7 @@ variable "aws_service_access_principals" {
 
 variable "create_organization" {
   type        = bool
-  default     = true
+  default     = false
   description = "Whether or not to use this module to create your AWS organization."
 }
 
